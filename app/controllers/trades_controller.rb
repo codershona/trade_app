@@ -70,10 +70,11 @@ class TradesController < ApplicationController
   
 
   def update
+    @trade = Trade.find(params[:id])
         
         if @trade.update(trade_params)
-       flash[:success] = "Your account has been updated successfully."
-        redirect_to trades_path
+       flash[:success] = "Your trade account has been updated successfully."
+        redirect_to trades_path(@trade)
         else
           render 'edit'
         end
