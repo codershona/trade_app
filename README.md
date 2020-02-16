@@ -16,5 +16,8 @@
    - rails active_storage:install ;
    - rails db:migrate;
    - Using Bulma Css;
+   - rails g migration createConversations  ;
+   - rails db:migrate ;
+   - rails g migration createMessages ;
    - 
 ```

@@ -9,27 +9,23 @@ class TradesController < ApplicationController
   # GET /trades
   # GET /trades.json
   def index
-    # @trades = Trade.all
+    @trades = Trade.all
 
-  @trades = Trade.all.order("created_at DESC")
+  # @trades = Trade.all.order("created_at DESC")
    
   end
 
   def new
     @trade = Trade.new
+    @trade.user = current_user
   end
 
-  # GET /trades/1
-  # GET /trades/1.json
+ 
   def show
-   # @trade = Trade.find(params[:trade_id])
+   # @trade = Trade.find(params[:id])
   end
 
-  # GET /trades/new
-
-
-
-  # GET /trades/1/edit
+ 
   def edit
   end
 
@@ -37,17 +33,21 @@ class TradesController < ApplicationController
   # POST /trades.json
 
 
-  #  def create
-  #   @trade = Trade.new(trade_params)
-  #   @trade = current_user
-  #   if @trade.save
-  #     flash[:success] = "Trade has been successfully created"
-  #   redirect_to trade_path(@trade)
-  #   # redirect_to @trade
-  #   else
-  # render 'new'
-  #     end
-  # end
+   def create
+    @trade = Trade.new(trade_params)
+    @trade = current_user
+     # @trade.user = current_user
+
+    if @trade.save
+
+  flash[:success] = "Trade has been successfully created"
+
+    redirect_to trades_path(@trade)
+    
+    else
+  render 'new'
+      end
+  end
 
 
    # @profile = Profile.new(:user_id => @user.id)
@@ -56,33 +56,21 @@ class TradesController < ApplicationController
   # @user.create_profile
 
 
-  def create
-      @trade = Trade.new(trade_params)
-      @trade = current_user
-   respond_to do |format|
-      if @trade.save
-        format.html { redirect_to trade_path(@trade), notice: 'Trade was successfully created.' }
-        format.json { render :show, status: :created, location: @trade }
-      else
-        format.html { render :new }
-        format.json { render json: @trade.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /trades/1
-  # PATCH/PUT /trades/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @trade.update(trade_params)
-  #       format.html { redirect_to @trade, notice: 'Trade was successfully updated.' }
-  #       format.json { render :show, status: :ok, location: @trade }
+  # def create
+  #     @trade = Trade.new(trade_params)
+  #     @trade = current_user
+  #  respond_to do |format|
+  #     if @trade.save
+  #       format.html { redirect_to trades_path(@trades), notice: 'Trade was successfully created.' }
+  #       format.json { render :show, status: :created, location: @trade }
   #     else
-  #       format.html { render :edit }
+  #       format.html { render :new }
   #       format.json { render json: @trade.errors, status: :unprocessable_entity }
   #     end
   #   end
   # end
+
+  
 
   def update
         
@@ -94,8 +82,6 @@ class TradesController < ApplicationController
         end
   end
 
-  # DELETE /trades/1
-  # DELETE /trades/1.json
   def destroy
     @trade.destroy
     respond_to do |format|
@@ -111,9 +97,6 @@ class TradesController < ApplicationController
     def set_trade
       @trade = Trade.find(params[:id])
 
-   # @trade = current_user.trades.friendly.find(params[:id]) 
-      # Article.find(params[:id]).update_attributes(article_params)
-       # @trade = Trade.find(params[:user_id])
     end
 
     # Only allow a list of trusted parameters through.
