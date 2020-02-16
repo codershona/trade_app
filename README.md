@@ -6,6 +6,8 @@
 
 #### BUILDED BY : FALGUNI ISLAM (SOFTWARE DEVELOPMENT)
 
+### Trading App with In-App Messaging (RESPONSIVE Rails web app)
+
 
 
 * NOTES :
