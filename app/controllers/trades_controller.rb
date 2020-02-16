@@ -8,9 +8,9 @@ class TradesController < ApplicationController
   
   
   def index
-    @trades = Trade.all
+    # @trades = Trade.all
 
-  # @trades = Trade.all.order("created_at DESC")
+  @trades = Trade.all.order("created_at DESC")
    
   end
 
