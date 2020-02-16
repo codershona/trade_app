@@ -25,5 +25,5 @@
    - rails g migration createMessages ;
    - rails g model Conversation --skip-migration;
    - rails g model Message --skip-migration ;
-   - 
+   - viva@example.com (admin)
 ```
