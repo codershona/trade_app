@@ -17,7 +17,7 @@ class TradesController < ApplicationController
 
   def new
     @trade = Trade.new
-    @trade.user = current_user
+    # @trade.user = current_user
   end
 
  
