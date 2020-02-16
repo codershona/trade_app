@@ -1,24 +1,13 @@
-# README
+### PROJECT : TRADE APP WITH IN_APP MESSAGING
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+* NOTES :
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+   - cd kickoff;
+   - rails new trade_app -m template.rb ;
+   - 
+```
