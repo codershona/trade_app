@@ -16,4 +16,20 @@ module ApplicationHelper
 	end
 
 
+	def markdown_to_html(text)
+
+   Kramdown::Document.new(text, input: "GFM").to_html
+
+	end
+
+
+	def trade_author(trade)
+
+   user_signed_in? && current_user.id = trade.user_signed_in
+   
+
+
+	end
+
+
 end

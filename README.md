@@ -15,5 +15,6 @@
    - rails db:migrate;
    - rails active_storage:install ;
    - rails db:migrate;
+   - Using Bulma Css;
    - 
 ```
