@@ -19,5 +19,7 @@
    - rails g migration createConversations  ;
    - rails db:migrate ;
    - rails g migration createMessages ;
+   - rails g model Conversation --skip-migration;
+   - rails g model Message --skip-migration ;
    - 
 ```

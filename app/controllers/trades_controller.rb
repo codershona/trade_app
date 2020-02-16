@@ -6,8 +6,7 @@ class TradesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   
-  # GET /trades
-  # GET /trades.json
+  
   def index
     @trades = Trade.all
 
@@ -29,8 +28,6 @@ class TradesController < ApplicationController
   def edit
   end
 
-  # POST /trades
-  # POST /trades.json
 
 
    def create
@@ -82,24 +79,24 @@ class TradesController < ApplicationController
         end
   end
 
-  def destroy
-    @trade.destroy
-    respond_to do |format|
-      format.html { redirect_to trades_url, notice: 'Trade was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @trade.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to trades_url, notice: 'Trade was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
 
 
-    # Use callbacks to share common setup or constraints between actions.
+  
     def set_trade
       @trade = Trade.find(params[:id])
 
     end
 
-    # Only allow a list of trusted parameters through.
+   
     def trade_params
       params.require(:trade).permit(:title, :description, :user_id, images: [])
     end
