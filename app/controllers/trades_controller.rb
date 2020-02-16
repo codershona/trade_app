@@ -79,6 +79,18 @@ class TradesController < ApplicationController
         end
   end
 
+  #   def update
+  #   respond_to do |format|
+  #     if @trade.update(trade_params)
+  #       format.html { redirect_to @trade, notice: 'Trade was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @trade }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @trade.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
   # def destroy
   #   @trade.destroy
   #   respond_to do |format|

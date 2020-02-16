@@ -1,4 +1,9 @@
+require 'kramdown'
+# require 'kramdown-parser-gfm'
+
 module ApplicationHelper
+
+
 
    def gravatar_for(user, options = { size: 200})
 
@@ -16,7 +21,15 @@ module ApplicationHelper
   
   def markdown_to_html(text)
     
-    Kramdown::Document.new(text, input: "GFM").to_html
+    # Kramdown::Document.new(text, input: "GFM").to_html
+
+    Kramdown::Document.new(text).to_html
+    
+     # if Parser.const_defined?(parser)
+     #    @root, @warnings = Parser.const_get(parser).parse(source, @options)
+     #  else
+     #    raise Kramdown::Error.new("kramdown has no parser to handle the specified input format: #{options[:input]}")
+     #  end
   
   end
 
