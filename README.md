@@ -2,9 +2,9 @@
 
 #### READY TO DEPLOY IN HEROKU
 
-### PROJECT CAN BE FOUND HERE:
+## Project Can be found in here :
+ **[Live version](https://quiet-bayou-93095.herokuapp.com/)**
 
-#### BUILDED BY : FALGUNI ISLAM (SOFTWARE DEVELOPMENT)
 
 ### Trading App with In-App Messaging (RESPONSIVE Rails web app)
 
