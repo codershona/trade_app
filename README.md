@@ -1,16 +1,23 @@
-## PROJECT : TRADE APP WITH IN_APP MESSAGING
+## PROJECT : TRADE APP WITH IN_APP USING MESSAGING
 
 #### READY TO DEPLOY IN HEROKU
 
 ## Project Can be found in here :
  **[Live version](https://quiet-bayou-93095.herokuapp.com/)**
 
+<p align="center">
+	
+<img src="https://user-images.githubusercontent.com/57604500/121789822-98648b80-cbd9-11eb-9ffe-c30d88415759.png" width=996>
+<br />
+<h3 align="center">TRADE APP WITH IN_APP USING MESSAGING</h3>
+</p>
+
 
 ### Trading App with In-App Messaging (RESPONSIVE Rails web app)
 
 
 
-* NOTES :
+* Project Commands :
 
 ```
    - cd kickoff;
